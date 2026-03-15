@@ -13,7 +13,7 @@ extern NSData *CAEncodeLayerTree(CALayer *rootLayer);
 extern NSString *kCAPackageTypeArchive;
 extern NSString *kCAPackageTypeCAMLBundle;
 
-@interface CAFilter : NSObject <NSCopying, NSMutableCopying, NSCoding>
+@interface CAFilter: NSObject <NSCopying, NSMutableCopying, NSCoding>
 + (instancetype)filterWithType:(NSString *)type;
 + (NSArray <NSString *> *)filterTypes;
 - (NSArray <NSString *> *)outputKeys;
@@ -24,7 +24,7 @@ extern NSString *kCAPackageTypeCAMLBundle;
 @property(getter=isEnabled) BOOL enabled;
 @end
 
-@interface CAPackage : NSObject
+@interface CAPackage: NSObject
 + (id)packageWithData:(NSData *)data type:(NSString *)type options:(id)opts error:(NSError **)outError;
 + (id)packageWithContentsOfURL:(NSURL *)url type:(NSString *)type options:(id)opts error:(NSError **)outError;
 - (NSArray <NSString *> *)publishedObjectNames;
